@@ -1,0 +1,21 @@
+<h1><%= @blog_entry.title %></h1>
+
+<h3>
+<%= @blog_entry.content %>
+<br>
+<br>
+Length : <%= @blog_entry.relative_length %>
+<br>
+Draft? : <b><%= @blog_entry.draft %></b>
+<br>
+Featured? : <b><%= @blog_entry.featured %></b>
+<br>
+<br>
+<%= link_to("Edit this Project", edit_blog_entry_path(@blog_entry.id)) %>
+<%= link_to 'Delete this Post', blog_entry_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<br>
+<%= link_to("All Entries", blog_entries_path) %>
+<br> 
+
+
+<%= link_to("Like!", like_page_path) %>

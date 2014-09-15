@@ -1,0 +1,10 @@
+<h1>Contacts Index</h1>
+
+<% @contacts.each do |p| %>
+
+  <p><%= link_to(p.name, contact_path(p.id)) %></p>
+<% end %>
+
+<%= link_to("New Contact", new_contact_path) %>
+<br>
+  <%= link_to("Home", root_path) %>

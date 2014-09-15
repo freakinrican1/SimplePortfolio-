@@ -1,0 +1,21 @@
+
+<%= link_to "Sign up for a  new user account." , signup_path%>
+
+
+
+<h1>My Blog</h1>
+
+<% @blog_entries.each do |p| %>
+
+  <h3><p><%= link_to(p.title, blog_entry_path(p.id)) %></p></h3>
+  <p><%=p.excerpt%></p>
+<% end %>
+
+<%= link_to("New Blog Post", new_post_path) %>
+
+<br>
+
+<%= link_to("Home", root_path) %>
+
+
+

@@ -1,0 +1,15 @@
+<h1><%= @project.name %></h1>
+
+<h3>
+<%= @project.description %>
+<br>
+<%= @project.summary %>
+<br>
+<%= link_to("Github",@project.github) %></h3>
+<br>
+<br>
+<%= link_to("Edit this Project", edit_project_path(@project.id)) %>
+<br>
+<%= link_to("All Projects", class_projects_path) %>
+<br>
+<%= link_to("Home", root_path) %>

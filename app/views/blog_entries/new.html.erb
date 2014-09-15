@@ -1,0 +1,20 @@
+<h1>New Entry</h1>
+
+<!-- Creates a POST request to "/users" -->
+<%= form_for @blog_entry  do |f| %>
+
+   <%= f.label :title %>
+   <%= f.text_field :title %>
+ <br>
+
+   <%= f.label :content%>
+   <%= f.text_area :content %>
+ <br>
+   <%= f.label :draft? %>
+   <%= f.check_box :draft %>
+ <br>
+ 
+  
+  <%= f.submit %>
+
+<% end %>

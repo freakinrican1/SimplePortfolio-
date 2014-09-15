@@ -1,0 +1,23 @@
+<h1>New Contact</h1>
+
+<!-- Creates a POST request to "/users" -->
+<%= form_for @contact  do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+<br>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+<br>
+  <%= f.label :message %>
+  <%= f.text_area :message %>
+<br>
+
+  
+  <%= f.submit %>
+
+<% end %>
+
+<br>
+  <%= link_to("All contacts", contacts_path) %>

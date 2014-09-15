@@ -1,0 +1,29 @@
+<h1>Edit Project</h1>
+
+
+<% @project.errors.full_messages.each do |msg| %>
+  <p><%= msg %></p>
+<% end %>
+
+<!-- Creates a PUT request to "/users/1/edit" -->
+<%#= form_for(@existing_recruit, :as => "user", :url => user_path(@existing_recruit.id), :method => "put") ... %>
+
+<%= form_for(@project) do |f| %>
+
+   <%= f.label :name %>
+   <%= f.text_field :name %>
+ <br>
+
+   <%= f.label :description %>
+   <%= f.text_field :description %>
+ <br>
+   <%= f.label :summary %>
+   <%= f.text_area :summary %>
+ <br>
+   <%= f.label :github %>
+   <%= f.text_area :github %>
+ <br>  
+  
+   <%= f.submit %>
+
+<% end %>

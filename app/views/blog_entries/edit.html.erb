@@ -1,0 +1,28 @@
+<h1>Edit Entry</h1>
+
+
+<% @blog_entry.errors.full_messages.each do |msg| %>
+  <p><%= msg %></p>
+<% end %>
+
+<!-- Creates a PUT request to "/users/1/edit" -->
+<%#= form_for(@existing_recruit, :as => "user", :url => user_path(@existing_recruit.id), :method => "put") ... %>
+
+<%= form_for(@blog_entry) do |f| %>
+
+   <%= f.label :title %>
+   <%= f.text_field :title %>
+ <br>
+
+   <%= f.label :content%>
+   <%= f.text_area :content %>
+ <br>
+   <%= f.label :draft? %>
+   <%= f.check_box :draft %>
+ <br>
+  <%= f.label :featured? %>
+  <%= f.check_box :featured %>
+  
+   <%= f.submit %>
+
+<% end %>
