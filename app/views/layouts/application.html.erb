@@ -7,6 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% if current_user %>
+    Logged in!
+  <% else %>
+    NOT logged in!
+  <% end %>
+
+  <% request.remote_ip %>
 
 <%= yield %>
 

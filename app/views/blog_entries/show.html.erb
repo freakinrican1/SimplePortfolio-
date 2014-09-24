@@ -8,7 +8,7 @@ Length : <%= @blog_entry.relative_length %>
 <br>
 Draft? : <b><%= @blog_entry.draft %></b>
 <br>
-Featured? : <b><%= @blog_entry.featured %></b>
+
 <br>
 <br>
 <%= link_to("Edit this Project", edit_blog_entry_path(@blog_entry.id)) %>
@@ -18,4 +18,3 @@ Featured? : <b><%= @blog_entry.featured %></b>
 <br> 
 
 
-<%= link_to("Like!", like_page_path) %>

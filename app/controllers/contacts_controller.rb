@@ -1,13 +1,14 @@
 class ContactsController < ApplicationController
+  skip_before_filter :authorize, :only => [:new, :create]
   
   def index
     @contacts = Contact.all 
   end
-  
+#------------------------------------------------------   
   def new
     @contact = Contact.new 
   end
-  
+#------------------------------------------------------   
   def create
     @contact = Contact.new(params[:contact])
     
@@ -17,11 +18,11 @@ class ContactsController < ApplicationController
       render "new"
     end
   end
-  
+#------------------------------------------------------   
   def show
     @contact = Contact.find(params[:id]) 
   end
   
-  
+#------------------------------------------------------  
   
 end
