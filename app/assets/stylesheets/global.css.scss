@@ -1,5 +1,5 @@
 $font1: 'Dosis', sans-serif;
-$font2: 'Yanone Kaffeesatz', sans-serif;
+$font2: 'Open Sans Condensed', sans-serif;
 
 $main-gray: #616369;
 $lighter-gray: #A1A1A1;
@@ -16,13 +16,17 @@ h1 {
 
 a{
 	font-family: $font1;
-	font-size: 18px;
 	color:$main-gray;
 	font-weight: lighter;
 	text-decoration: none;
 	letter-spacing: .2px;
 	text-transform: uppercase;
 	@extend .slow-hover
+}
+
+a:hover{
+  text-decoration: none;
+  color: $lightest-gray;
 }
 
 p{
@@ -32,17 +36,21 @@ p{
 	letter-spacing: .5px;
 }
 
-a:hover{
-  text-decoration: none;
-  color: $lighter-gray;
+.nav-li{
+	list-style-type: none;
+	padding: 8px 0px; 
+	font-family: $font1;
+	font-size: 20px;
 }
 
+
+
 .slow-hover{
-  -webkit-transition: all 500ms ease;
-  -moz-transition: all 500ms ease;
-  -ms-transition: all 500ms ease;
-  -o-transition: all 500ms ease;
-  transition: all 500ms ease;
+  -webkit-transition: all 700ms ease;
+  -moz-transition: all 700ms ease;
+  -ms-transition: all 700ms ease;
+  -o-transition: all 700ms ease;
+  transition: all 700ms ease;
 }
 
 
