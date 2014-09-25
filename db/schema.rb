@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140924195922) do
+ActiveRecord::Schema.define(:version => 20140925002025) do
 
   create_table "blog_entries", :force => true do |t|
     t.string   "title"
@@ -35,8 +35,9 @@ ActiveRecord::Schema.define(:version => 20140924195922) do
     t.string   "description"
     t.text     "summary"
     t.text     "github"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.string   "project_photo"
   end
 
   create_table "users", :force => true do |t|

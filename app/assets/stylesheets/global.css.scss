@@ -1,0 +1,48 @@
+$font1: 'Dosis', sans-serif;
+$font2: 'Yanone Kaffeesatz', sans-serif;
+
+$main-gray: #616369;
+$lighter-gray: #A1A1A1;
+$lightest-gray: #CCC;
+
+
+
+
+h1 {
+	font: 28px $font1;
+	color: $main-gray;
+	letter-spacing: 2px;
+}
+
+a{
+	font-family: $font1;
+	font-size: 18px;
+	color:$main-gray;
+	font-weight: lighter;
+	text-decoration: none;
+	letter-spacing: .2px;
+	text-transform: uppercase;
+	@extend .slow-hover
+}
+
+p{
+	font-family: $font2;
+	font-size: 18px;
+	color:$main-gray;
+	letter-spacing: .5px;
+}
+
+a:hover{
+  text-decoration: none;
+  color: $lighter-gray;
+}
+
+.slow-hover{
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+

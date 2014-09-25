@@ -7,9 +7,10 @@
 <br>
 <%= link_to("Github",@project.github) %></h3>
 <br>
+ <%= image_tag(@project.project_photo)%>
 <br>
 <%= link_to("Edit this Project", edit_project_path(@project.id)) %>
 <br>
-<%= link_to("All Projects", class_projects_path) %>
+<%= link_to("All Projects", projects_path) %>
 <br>
 <%= link_to("Home", root_path) %>
