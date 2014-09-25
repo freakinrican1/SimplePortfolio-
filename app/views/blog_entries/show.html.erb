@@ -1,18 +1,20 @@
 <h1><%= @blog_entry.title %></h1>
 
-<h3>
+<p>
 <%= @blog_entry.content %>
 <br>
 <br>
-Length : <%= @blog_entry.relative_length %>
+Length : <b><%= @blog_entry.relative_length %></b>
 <br>
 Draft? : <b><%= @blog_entry.draft %></b>
-<br>
+</p>
 
 <br>
 <br>
+<% if current_user %>
 <%= link_to("Edit this Project", edit_blog_entry_path(@blog_entry.id)) %>
 <%= link_to 'Delete this Post', blog_entry_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% end %>
 <br>
 <%= link_to("All Entries", blog_entries_path) %>
 <br> 

@@ -11,8 +11,9 @@
     <p><%=p.excerpt%></p>
 <% end %>
 
+<% if current_user %>
 <%= link_to("New Blog Post", new_blog_entry_path) %>
-
+<% end %>
 <br>
 
 <%= link_to("Home", root_path) %>

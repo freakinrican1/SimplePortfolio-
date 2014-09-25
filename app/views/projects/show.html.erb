@@ -1,15 +1,17 @@
 <h1><%= @project.name %></h1>
 
-<h3>
+<p>
 <%= @project.description %>
 <br>
 <%= @project.summary %>
-<br>
+</p>
 <%= link_to("Github",@project.github) %></h3>
 <br>
  <%= image_tag(@project.project_photo)%>
 <br>
+<%if current_user %>
 <%= link_to("Edit this Project", edit_project_path(@project.id)) %>
+<% end %>
 <br>
 <%= link_to("All Projects", projects_path) %>
 <br>
