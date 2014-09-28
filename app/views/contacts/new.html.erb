@@ -1,17 +1,18 @@
-<h1>New Contact</h1>
+<div id= "fcontent">
+<h1 class="fheadertext">New Contact</h1>
 
 <!-- Creates a POST request to "/users" -->
 <%= form_for @contact  do |f| %>
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+
+  <%= f.text_field :name, :placeholder => "Name"%>
 <br>
 
-  <%= f.label :email %>
-  <%= f.text_field :email %>
+
+  <%= f.text_field :email, :placeholder => "Email"%>
 <br>
-  <%= f.label :message %>
-  <%= f.text_area :message %>
+ 
+  <%= f.text_area :message, :placeholder => "Say what you need to say."%>
 <br>
 
   
@@ -19,5 +20,7 @@
 
 <% end %>
 
+<% if current_user %>
 <br>
   <%= link_to("All contacts", contacts_path) %>
+  <% end %>

@@ -10,13 +10,26 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<p>	
 <% if current_user %>
+<p>	
 <%= "Hello " + current_user.email + "--"%> <%= link_to("Logout", logout_path) %>
-<% else %>
-<%= link_to("Log In", login_path) %>
-<% end %>
 </p>
+<% end %>
+	
+<div class ="halfheader">
+	<h1>NATHANIEL RUIZ PORTFOLIO</h1>
+</div>	
+
+<nav id= 'fnav'>
+
+<li class="nav-li"><%= link_to("Home", root_path, :class => "nav-item") %></li>
+<li class="nav-li"><%= link_to("About me.", about_path, :class => "nav-item") %></li>
+<li class="nav-li"><%= link_to("Projects", projects_path, :class => "nav-item") %></li>
+<li class="nav-li"><%= link_to("Blog Posts.", blog_entries_path, :class => "nav-item") %></li>
+<li class="nav-li"><%= link_to("Contact", new_contact_path, :class => "nav-item") %></li>
+</nav>
+	
+
   <% request.remote_ip %>
 
 <%= yield %>

@@ -3,15 +3,25 @@ $font2: 'Open Sans Condensed', sans-serif;
 
 $main-gray: #616369;
 $lighter-gray: #A1A1A1;
-$lightest-gray: #CCC;
+$lightest-gray:#DBDBDB ;
 
 
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 
 h1 {
 	font: 28px $font1;
 	color: $main-gray;
 	letter-spacing: 2px;
+	text-align: center;
+	
 }
 
 a{
@@ -31,9 +41,34 @@ a:hover{
 
 p{
 	font-family: $font2;
-	font-size: 18px;
+	font-size: 20px;
 	color:$main-gray;
 	letter-spacing: .5px;
+}
+
+input {
+	margin: 10px auto;
+	width: 50%;
+	@extend p;
+	text-align: left;
+	padding-left: 20px;
+	height: 30px;
+	background: $lightest-gray;
+	border: none;
+	border-radius: 5px;
+}
+
+textarea {
+	border: none;
+	border-radius: 10px;
+	width:75%;
+	background: $lightest-gray;
+	width: 50%;
+}
+
+:focus {
+  outline-color: transparent;
+  outline-style: none;
 }
 
 .nav-li{
@@ -43,6 +78,10 @@ p{
 	font-size: 20px;
 }
 
+.zero-out{
+	margin: 0 auto;
+	padding: 0 0 0 0;
+}
 
 
 .slow-hover{
@@ -53,4 +92,43 @@ p{
   transition: all 700ms ease;
 }
 
+body {
+	width: 96%;
+	max-width: 980px;
+	margin: auto;
+	padding: 2%;
+}
 
+.halfheader{
+	width:100%;
+	padding: 75px;
+	background: url("http://nathruizduh.co/Images/NathPortHeadBg2.jpg") no-repeat;
+	background-size: 100%;
+	float: left;
+	text-indent: -9999px;
+}
+
+.fheadertext{
+	width: 100%;
+	float: left;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	 
+	
+}
+
+#fnav{
+	@extend .zero-out;
+	width:19%;
+	float:left;
+	
+}
+
+#fcontent{
+	@extend .zero-out;
+	float: right;
+	width: 79%;
+	padding: 0 10px;
+	
+	
+}
