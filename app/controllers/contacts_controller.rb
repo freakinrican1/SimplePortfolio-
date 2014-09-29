@@ -13,7 +13,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(params[:contact])
     
     if @contact.save
-      redirect_to contacts_path 
+      redirect_to contact_me_path 
     else 
       render "new"
     end

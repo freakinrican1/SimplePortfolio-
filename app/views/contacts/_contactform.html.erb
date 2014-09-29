@@ -1,8 +1,5 @@
-<div id= "fcontent">
-<h1 class="fheadertext">New Contact</h1>
-
-<!-- Creates a POST request to "/users" -->
-<%= form_for @contact  do |f| %>
+<div id="form">
+<%= form_for @contact, remote: true  do |f| %>
 
 
   <%= f.text_field :name, :placeholder => "Name"%>
@@ -17,10 +14,10 @@
 
   
   <%= f.submit "Send" , :class => 'submit'%>
-
-<% end %>
-
-<% if current_user %>
-<br>
-  <%= link_to("All contacts", contacts_path) %>
-  <% end %>
+  
+ <% end %>
+ 
+ 
+  
+  <a href = "#" id="hideform">Hide</a>
+</div>

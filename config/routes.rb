@@ -13,7 +13,7 @@ SimplePortfolio::Application.routes.draw do
   
  get "about" => 'pages#about', :as => 'about'
  
- 
+ get "contact_me" =>'pages#contact_me', :as => 'contact_me'
  
  
   resources :projects

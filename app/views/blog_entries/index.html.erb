@@ -2,8 +2,8 @@
 <!--<%= link_to "Sign up for a  new user account." , signup_path%> -->
 
 
-
-<h1>My Blog</h1>
+<div id= "fcontent">
+<h1 class= 'fheadertext'>My Blog</h1>
 
 <% @blog_entries.each do |p| %>
 
@@ -14,9 +14,8 @@
 <% if current_user %>
 <%= link_to("New Blog Post", new_blog_entry_path) %>
 <% end %>
-<br>
 
-<%= link_to("Home", root_path) %>
+</div>
 
 
 

@@ -59,11 +59,19 @@ input {
 }
 
 textarea {
+	margin: 10px auto;
 	border: none;
+	@extend p;
+	padding: 20px;
+	height: 150px;
 	border-radius: 10px;
-	width:75%;
+	width:70%;
 	background: $lightest-gray;
-	width: 50%;
+}
+
+.submit{
+	width: auto;
+	padding: 0 10px;
 }
 
 :focus {
