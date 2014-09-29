@@ -24,6 +24,13 @@ h1 {
 	
 }
 
+h2 {
+	font: 22px $font1;
+	color: $main-gray;
+	letter-spacing: 2px;
+	text-align: center;
+}
+
 a{
 	font-family: $font1;
 	color:$main-gray;
@@ -65,7 +72,7 @@ textarea {
 	padding: 20px;
 	height: 150px;
 	border-radius: 10px;
-	width:70%;
+	width:60%;
 	background: $lightest-gray;
 }
 
@@ -101,8 +108,8 @@ textarea {
 }
 
 body {
-	width: 96%;
-	max-width: 980px;
+	width: 100%;
+	max-width: 1000px;
 	margin: auto;
 	padding: 2%;
 }
@@ -116,13 +123,48 @@ body {
 	text-indent: -9999px;
 }
 
+.contact_item{
+	float:left;
+	margin:80px 41px 0 41px;
+	padding-bottom: 140px;
+	text-indent: -9999px;
+
+	
+}
+
+#message_contact_item{
+	width:25%;
+	background: url("/mail.png") no-repeat;
+	background-size: 100%;
+	@extend .contact_item;
+}
+	
+#phone_contact_item{
+	width:15%;
+	background: url("/nexus.png") no-repeat;
+	background-size: 100%;
+	@extend .contact_item;
+}
+
+#social_contact_item{
+	width:25%;
+	background: url("/social.png") no-repeat;
+	background-size: 100%;
+	@extend .contact_item;
+	
+}
+
 .fheadertext{
 	width: 100%;
 	float: left;
 	margin: 0 auto;
+//	padding-bottom: 20px;	
+}
+
+
+
+.fmorelink{
 	padding-bottom: 20px;
-	 
-	
 }
 
 #fnav{
